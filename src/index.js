@@ -1,10 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import LoginPage from "./pages/Login/Login.js";
+import Main from "./pages/Main/Main.js";
+import Router from "./Router";
 
-import MainPage from "./pages/Main/Main.js";
-ReactDOM.render(
-  <React.StrictMode>
-    <MainPage />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Router />);

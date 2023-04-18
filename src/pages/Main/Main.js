@@ -1,5 +1,5 @@
 import React from "react";
-import "./main.css";
+import "./main.scss";
 import "../../styles/reset.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -16,6 +16,7 @@ import {
   faUser as fasUser,
 } from "@fortawesome/free-solid-svg-icons";
 import { faEllipsisH } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 
 const Main = () => {
   return (
@@ -50,11 +51,15 @@ export const Nav = () => {
   );
 };
 export const NavMenus = () => {
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate("/login");
+  };
   return (
     <div id="mainProfileThings">
       <a className="profileThings" id="mainCompass"></a>
       <a className="profileThings" id="mainNavHeart"></a>
-      <a className="profileThings" id="mainMyPage"></a>
+      <a className="profileThings" id="mainMyPage" onClick={goToLogin}></a>
     </div>
   );
 };

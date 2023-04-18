@@ -1,8 +1,14 @@
 import React from "react";
-import "./loginstyle.css";
+import "./loginstyle.scss";
 import "../../styles/reset.css";
+import { useNavigate } from "react-router-dom";
 
-function LoginPage() {
+const LoginPage = () => {
+  const navigate = useNavigate();
+  const goToMain = () => {
+    navigate("/main");
+  };
+
   return (
     <div id="mainPage">
       <div id="titleLogin">Instagram</div>
@@ -21,15 +27,16 @@ function LoginPage() {
         />
       </div>
       <div id="submitLogin">
-        <button id="loginButton" className="">
+        <button id="loginButton" onClick={goToMain}>
           로그인
         </button>
+        {/* //로그인 버튼을 눌렀을때 메인페이지로 감 */}
       </div>
       <a href="" id="forgotLogin">
         비밀번호를 잊으셨나요?
       </a>
     </div>
   );
-}
+};
 
 export default LoginPage;
