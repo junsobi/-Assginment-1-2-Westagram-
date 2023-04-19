@@ -1,6 +1,5 @@
 import React from "react";
 import "./loginstyle.scss";
-import "../../styles/reset.css";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {

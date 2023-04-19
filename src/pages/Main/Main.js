@@ -1,6 +1,5 @@
 import React from "react";
 import "./main.scss";
-import "../../styles/reset.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHeart as farHeart,
